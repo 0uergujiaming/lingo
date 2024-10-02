@@ -4,7 +4,7 @@ import { Loader } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Home() {
+const Home = () => {
   return (
     <div className="flex-1 w-full mx-auto lg:max-w-[988px] flex flex-col lg:flex-row items-center justify-center p-4 gap-4">
       <div className="relative w-[240px] h-[240px] lg:w-[424px] lg:h-[424px]">
@@ -12,19 +12,19 @@ export default function Home() {
       </div>
       <div className="flex flex-col items-center gap-y-4">
         <h1 className="text-xl font-bold text-neutral-600 lg:text-3xl text-center max-w-[500px]">Learn,pratice and master new languages with Lingo.</h1>
-        <div>
+        <div className="flex flex-col gap-y-2 max-w-[330px]">
           <ClerkLoading>
             <Loader className="h-5 w-5 animate-spin text-muted-foreground" />
           </ClerkLoading>
           <ClerkLoaded>
             <SignedOut>
               <SignUpButton mode="modal" forceRedirectUrl="/learn" signInForceRedirectUrl="/learn">
-                <Button block size="lg" variant="secondary">
+                <Button className="w-full" size="lg" variant="secondary">
                   Get Started
                 </Button>
               </SignUpButton>
               <SignInButton mode="modal" forceRedirectUrl="/learn" signUpForceRedirectUrl="/learn">
-                <Button block className="mt-2" size="lg" variant="primaryOutline">
+                <Button className="w-full" size="lg" variant="primaryOutline">
                   I already have an account
                 </Button>
               </SignInButton>
@@ -40,3 +40,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home

@@ -17,8 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider afterSignOutUrl="/">
-      <html lang="en" className="h-full">
-        <body className={`${font.className} h-full`}>{children}</body>
+      <html lang="en">
+        <body className={`${font.className}`}>{children}</body>
       </html>
     </ClerkProvider>
   )
